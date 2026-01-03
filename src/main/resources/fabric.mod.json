@@ -2,20 +2,39 @@
   "schemaVersion": 1,
   "id": "emrecan",
   "version": "1.0.0",
-  "name": "Emrecan",
-  "description": "Emrecan tarafından yapılan basit Fabric mod",
-  "authors": ["Emrecan"],
-  "contact": {},
+
+  "name": "Emrecan Mod",
+  "description": "My Fabric mod",
+  "authors": [
+    "Emrecan"
+  ],
+
+  "contact": {
+    "homepage": "",
+    "sources": ""
+  },
+
   "license": "MIT",
+
   "environment": "*",
+
   "entrypoints": {
     "main": [
       "com.emrecan.EmrecanMod"
+    ],
+    "client": [
+      "com.emrecan.client.EmrecanClient"
     ]
   },
+
+  "mixins": [
+    "emrecan.mixins.json",
+    "emrecan.client.mixins.json"
+  ],
+
   "depends": {
     "fabricloader": ">=0.15.0",
-    "minecraft": "1.21.11",
-    "fabric": "*"
+    "fabric": "*",
+    "minecraft": "1.21.11"
   }
 }
